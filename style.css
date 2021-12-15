@@ -4,6 +4,7 @@
 
 body {
     background-color: #659dbd;
+    height: 100vh;
 }
 
 p {
@@ -11,10 +12,6 @@ p {
     font-weight: bold;
 }
 
-.anchor {
-    color:white;
-    text-decoration: none;
-}
 
 /* jumbotron start */
 .notification {
@@ -44,4 +41,24 @@ p {
     text-align: center;
     color: white;
     font-size: 50px;
+}
+
+.anchor {
+    color:white;
+    text-decoration: none;
+}
+.anchor:hover {
+    color:#e27d60 ;
+}
+
+.vw {
+    vw: 100%;
+}
+
+.footer {
+    color: white;
+    background-color: #e27d60;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }

@@ -37,14 +37,24 @@ function getMovieInfo(info) {
             // sets all of the retrieved data into dynamically created elements within the 
             // movieInfoEl
             movieInfoEl.innerHTML = `
+            <div class='columns'>
+            <div class='column'>
             <h1>Movie Title: ${titleEl}</h1><br>
+            </div>
+            <div class='poster column is half'>
             <img src= '${posterApi}'><br>
+            </div>
+            <div class='column'>
+            <div class='columns'>
+            <div class='column'>
             <p>Genre: ${genreEl}</p><br>
             <p>Actors: ${actors}</p><br>
             <p> Year Released:${yearReleased}</p> <br>
             <p>Director: ${directorEl}</p><br>
             <p> IMDb Rating: ${imdRating}</p><br>
-              <p> IMDB page: <a class='anchor' href='${imdbUrl}'target='_blank'>${imdbUrl}</a></p>
+            <p> IMDB page: <a class='anchor' href='${imdbUrl}'target='_blank'>${imdbUrl}</a></p>
+            </div>
+            </div>  
               `;
         });
 
