@@ -1,2 +1,81 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    margin-top: 1.7%;
+}
 
 
+/* jumbotron start */
+.notification {
+    color: white;
+    background-color: #e27d60;
+    text-align: center;
+    font-size: 30px;
+}
+
+.notification h1 {
+    font-weight: 800;
+}
+/* jumbotron end */
+
+/* Search-bar Starts*/
+.search {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* Serch-bar Ends*/
+
+/* Movie-info Display Starts */
+#movie-info {
+    display: -webkit-box;
+    justify-content: center;
+    margin-top: 110px;
+    margin-bottom: 150px;    
+}
+
+.image {      
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+/* Movie-info Display Ends */
+ 
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    #movie-info {
+        display: inline-block;              
+    }
+
+    .image {
+        margin-left: 0;
+    }    
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    #movie-info {
+        display: inline-block;               
+    }   
+      
+} 
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    #movie-info {
+        display: inline-block;        
+    }
+    
+}
+
+/* MEDIA QUERY FOR IPAD PRO */
+@media screen and (max-width: 1366px) {
+    #movie-info {
+        display: inline-block;        
+    }
+    
+}
