@@ -3,6 +3,12 @@ var apiKey = '5e6b3c6c';
 
 // Created Variable to grab element with id=movie-info
 var movieInfoEl = document.querySelector('#movie-info');
+var qurybox = document.querySelector('#qurybox');
+var movies = [];
+
+if (localStorage.getItem('movie-title')) {
+  movies = JSON.parse(localStorage.getItem('movie-title'));
+}
 
 //Declared a variable to store the movie
 var data;
@@ -64,3 +70,26 @@ function getMovieInfo(info) {
     }
   );
 }
+
+var save = function (input) {
+  var saveBtn = document.querySelector('.btn');
+  if (saveBtn) {
+    movies.push(qurybox.value);
+    localStorage.setItem('movie-title', JSON.stringify(movies));
+    addToList();
+  }
+};
+
+$('.btn').on('click', save);
+
+function addToList() {
+  var ulEl = document.querySelector('.save-list');
+  for (var i = 0; i < movies.length; i++) {
+    var liEl = document.createElement('li');
+    liEl.className = 'save-list-group';
+    liEl.textContent = movies[i];
+    ulEl.appendChild(liEl);
+  }
+}
+
+addToList();
