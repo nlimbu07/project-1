@@ -4,13 +4,14 @@ var apiKey = '5e6b3c6c';
 // Created Variable to grab element with id=movie-info
 var movieInfoEl = document.querySelector('#movie-info');
 var qurybox = document.querySelector('#qurybox');
+// array to store the movies
 var movies = [];
 
 if (localStorage.getItem('movie-title')) {
   movies = JSON.parse(localStorage.getItem('movie-title'));
 }
 
-//Declared a variable to store the movie
+// Declared a variable to store the movie
 var data;
 
 function getMovieInfo(info) {
@@ -71,10 +72,15 @@ function getMovieInfo(info) {
   );
 }
 
-var save = function (input) {
+// add movies data to the movies array as an object
+var save = function () {
   var saveBtn = document.querySelector('.btn');
   if (saveBtn) {
     movies.push(qurybox.value);
+    localStorage.setItem('movie-title', JSON.stringify(movies));
+    addToList();
+  } else if (getMovieInfo(data) > 0) {
+    movies.push(data.toUpperCase());
     localStorage.setItem('movie-title', JSON.stringify(movies));
     addToList();
   }

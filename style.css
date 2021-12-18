@@ -30,6 +30,29 @@ p {
 }
 /* Serch-bar Ends*/
 
+.btn {
+    background-color: orange;
+    font-size: 1.3rem;
+    padding: 6px 5px;
+    width: 50%;
+    display: block;
+    margin: 7px 0;
+    color: #6f308f;
+    border-radius: 5px;
+}
+
+.save-list-group {
+    background-color: white;
+    color: black;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px 5px;
+    margin: 7px 0;
+    border-radius: 5px;
+}
+
 /* Movie-info Display Starts */
 #movie-info {
     display: -webkit-box;
@@ -43,6 +66,7 @@ p {
     margin-left: 150px;
     margin-right: 150px;
 }
+
 /* Movie-info Display Ends */
  
 .save-list {
