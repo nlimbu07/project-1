@@ -1,5 +1,5 @@
 // omdb Api key
-var apiKey = '5e6b3c6c';
+var apiKey = 'fc1fef96';
 
 // Created Variable to grab element with id=movie-info
 var movieInfoEl = document.querySelector('#movie-info');
@@ -40,7 +40,7 @@ function getMovieInfo(info) {
 
       // This is our second Api to retrieve our movie poster img
       var posterApi =
-        'https://img.omdbapi.com/?i=' + posterid + '&h=600&apikey=5e6b3c6c';
+        'https://img.omdbapi.com/?i=' + posterid + '&h=600&apikey=fc1fef96';
 
       // console logging to test Poster Api response
       // because not all movies have a poster available
