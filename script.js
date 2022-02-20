@@ -7,7 +7,6 @@ var qurybox = document.querySelector('#qurybox');
 // array to store the movies
 var movies = [];
 
-// saves movies in local storage
 if (localStorage.getItem('movie-title')) {
   movies = JSON.parse(localStorage.getItem('movie-title'));
 }
@@ -51,8 +50,10 @@ function getMovieInfo(info) {
       $.get(posterApi, function () {
         // sets all of the retrieved data into dynamically created elements within the
         // movieInfoEl
-        movieInfoEl.innerHTML = `        
-            <img class="image" src= '${posterApi}'><br><br>            
+        movieInfoEl.innerHTML = `
+        
+            <img class="image" src= '${posterApi}'><br><br>
+            
             <p>Movie Name: <i style="color: orange;">${title}</i><br><br>
             Genre: <i style="color: orange;">${genreEl}</i><br><br>
             Rated: <i style="color: orange;">${rated}</i><br><br>            
@@ -86,10 +87,10 @@ var save = function () {
   }
 };
 
-// click handlers
-$('.btn').on('click', save);
+// click Handlers
+document.querySelector('.btn').addEventListener('click', save);
 
-// dynamically add the passed movies on the search history
+// dynamically add the movies name on the search history
 function addToList() {
   var ulEl = document.querySelector('.save-list');
   ulEl.innerHTML = '';
@@ -101,5 +102,16 @@ function addToList() {
   }
 }
 
-// calling function
+// function call
 addToList();
+
+// clear search history
+function clearSearch(event) {
+  event.preventDefault();
+  movies = [];
+  localStorage.removeItem('movie-title');
+  document.location.reload();
+}
+
+// click Handlers
+document.querySelector('.clearBtn').addEventListener('click', clearSearch);
